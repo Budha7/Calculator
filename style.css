@@ -1,0 +1,165 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --yellow: #FCB31B;
+    --white: #ffffff;
+}
+
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto 2rem;
+}
+
+.container__child {
+    max-width: 300px;
+    width: 100%;
+}
+
+.calculator {
+    border-radius: 1rem;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+.calculator .all-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    background: #212121;
+
+}
+
+.calculator .display {
+    grid-column: 1 / -1;
+    background: #424242;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: right;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.calculator .all-buttons {
+    padding: 1rem;
+}
+
+.calculator-display output {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+output#user-input {
+    font-size: 1.325rem;
+    font-weight: 400;
+    text-align: right;
+    color: #60A07F;
+}
+
+output#result {
+    font-size: 1.625rem;
+    font-weight: 600;
+    text-align: right;
+    color: var(--white);
+}
+
+.all-buttons button {
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.equals {
+    grid-column: 3/5;
+}
+
+button.equals:hover {
+    background: limegreen;
+    color: var(--white);
+    transform: translateY(-0.2rem);
+}
+
+button.digits:hover,
+button.decimal:hover {
+    background: #bdbdbd;
+    color: #212121;
+    transform: translateY(-0.2rem);
+}
+
+button.allclear:hover,
+button.clear:hover {
+    background: lightcoral;
+    color: #000;
+    transform: translateY(-0.2rem);
+}
+
+button.digits:active,
+button.operators:active,
+button.decimal:active,
+button.allclear:active,
+button.clear:active,
+button.equals:active {
+    transform: translateY(0rem);
+}
+
+button.operators:hover {
+    background: orange;
+    color: var(--white);
+    transform: translateY(-0.2rem);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+output {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+button {
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}

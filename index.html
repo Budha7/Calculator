@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<section class="container-parent">
+    <div class="container-child">
+        <div class="calculator">
+            <div class="display">
+                <div class="calculator-display">
+                    <output id="user-input" type="text" class="user-input">0</output>
+                    <output id="result" type="text" class="result">&nbsp;</output>
+                </div>
+            </div>
+            <div class="all-buttons">
+                <button id='allclear' data-type="reset" class="allclear">AC</button>
+                <button id='clear' data-type="backspace" class="clear">C</button>
+                <button id='percentage' data-type="operator" value="%" class="operators">%</button>
+                <button id='divide' data-type="operator" value="/" class="operators">&#247;</button>
+                <button id='digit-7' data-type="number" class="digits" value="7">7</button>
+                <button id='digit-8' data-type="number" class="digits" value="8">8</button>
+                <button id='digit-9' data-type="number" class="digits" value="9">9</button>
+                <button id='multiply' data-type="operator" value="x" class="operators">&#215;</button>
+                <button id='digit-4' data-type="number" class="digits" value="4">4</button>
+                <button id='digit-5' data-type="number" class="digits" value="5">5</button>
+                <button id='digit-6' data-type="number" class="digits" value="6">6</button>
+                <button id='minus' data-type="operator" value="-" class="operators">&#8722;</button>
+                <button id='digit-1' data-type="number" class="digits" value="1">1</button>
+                <button id='digit-2' data-type="number" class="digits" value="2">2</button>
+                <button id='digit-3' data-type="number" class="digits" value="3">3</button>
+                <button id='plus' data-type="operator" value="+" class="operators">&#43;</button>
+                <button id='digit-0' class="digits" value="0">0</button>
+                <button id='decimal' data-type="decimal" value="." class="decimal">.</button>
+                <button id='equals' data-type="equal" value="=" class="equals">&#61;</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<footer class="footer" id="footer">
+    <p>
+        Realized by Budha7
+    </p>
+    <a href="https://github.com/Budha7" target="_blank">
+        <img src="icons/github.svg" alt="">
+    </a>
+</footer>
+</html>
