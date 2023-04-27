@@ -6,7 +6,7 @@ let isEqualsPressed = false, equation = 0, checkForDecimal = '';
 
 calcKeys.addEventListener('click', (e) => {
     const key = e.target;
-    const keyValue = key.textContent;
+    const keyValue = key.value;
     let inputDisplay = userInput.textContent;
     const {type} = key.dataset;
     const {previousKeyType} = calculator.dataset;
@@ -149,19 +149,19 @@ document.addEventListener('keydown', (e) => {
         '-': 'minus'
     }
 
-    if (!isNaN(event.key) && event.key !== ' ') {
-        document.getElementById(`digit-${event.key}`).click();
+    if (!isNaN(Number(e.key)) && e.key !== ' ') {
+        document.getElementById(`digit-${e.key}`).click();
     }
-    if (['/', 'x', '+', '-', '*', '%'].includes(event.key)) {
-        document.getElementById(getOperators[event.key]).click();
+    if (['/', 'x', '+', '-', '*', '%'].includes(e.key)) {
+        document.getElementById(getOperators[e.key]).click();
     }
-    if (event.key === 'Backspace' || event.key === 'c' || event.key === 'C') {
+    if (e.key === 'Backspace' || e.key === 'c' || e.key === 'C') {
         document.getElementById('clear').click();
     }
-    if (event.key === '=' || event.key === 'Enter') {
+    if (e.key === '=' || e.key === 'Enter') {
         document.getElementById('equals').click();
     }
-    if (event.key === '.') {
+    if (e.key === '.') {
         document.getElementById('decimal').click();
     }
 })
